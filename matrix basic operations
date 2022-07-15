@@ -1,0 +1,64 @@
+#matrix transpose
+x=[[2,3,4],[1,7,6],[9,8,0]]
+result=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(x)):
+    for j in range(len(x[0])):
+        result[i][j]=x[j][i]
+for r in result:
+    print(r)
+    
+    
+#matrix addition
+x=[[2,3,4],[1,7,6],[9,8,0]]
+y=[[1,2,3],[4,5,6],[9,8,7]]
+result=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(x)):
+    for j in range(len(x[0])):
+        result[i][j]=x[i][j]+y[i][j]
+for r in result:
+    print(r) 
+    
+    
+    
+#matrix subtraction
+x=[[2,3,4],[1,7,6],[9,8,0]]
+y=[[1,2,3],[4,5,6],[9,8,7]]
+result=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(x)):
+    for j in range(len(x[0])):
+        result[i][j]=x[i][j]-y[i][j]
+for r in result:
+    print(r)
+    
+    
+    
+#matrix multiplication
+x=[[2,3,4],[1,7,6],[9,8,0]]
+y=[[1,2,3],[4,5,6],[9,8,7]]
+result=[[0,0,0],[0,0,0],[0,0,0]]
+for i in range(len(x)):
+    for j in range(len(y[0])):
+        for k in range(len(y)):
+            result[i][j] += x[i][k] * y[k][j]
+for r in result:
+    print(r)
+    
+    
+    
+#determinant of matrix
+import numpy as np
+x=np.array([[2,3,4],[1,7,6],[9,8,0]])
+print("Numpy Matrix is:")
+print(x)
+det = np.linalg.det(x)
+print("\nDeterminant of given 3X3 matrix:")
+print(int(det))
+
+
+
+#inverse of a matrix
+import numpy as np
+A = np.array([[6, 1, 1],
+              [4, -2, 5],
+              [2, 8, 7]])
+print(np.linalg.inv(A))
